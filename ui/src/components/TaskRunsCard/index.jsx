@@ -239,7 +239,7 @@ export default class TaskRunsCard extends Component {
         pageSize={ARTIFACTS_PAGE_SIZE}
         columnsSize={3}
         onPageChange={onArtifactsPageChange}
-        renderRow={({ node: artifact }) => (
+        renderRow={({ node: artifact }) => {
           <TableRow
             key={`run-artifact-${run.taskId}-${run.runId}-${artifact.name}`}
             className={classNames(
@@ -281,7 +281,7 @@ export default class TaskRunsCard extends Component {
               </TableCell>
             </Link>
           </TableRow>
-        )}
+        }}
       />
     );
   }
